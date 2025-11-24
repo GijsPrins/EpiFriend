@@ -5,6 +5,7 @@ import MedicationManager from './components/MedicationManager.vue'
 import Dashboard from './components/Dashboard.vue'
 import CalendarView from './components/CalendarView.vue'
 import SettingsView from './components/SettingsView.vue'
+import ToastNotification from './components/ui/ToastNotification.vue'
 
 const { t } = useI18n()
 const currentView = ref('dashboard')
@@ -27,6 +28,9 @@ const currentView = ref('dashboard')
           <SettingsView v-else-if="currentView === 'settings'" />
         </Transition>
       </main>
+
+      <!-- Toast Notifications -->
+      <ToastNotification />
 
       <!-- Bottom Navigation -->
       <nav class="fixed bottom-0 left-0 right-0 bg-surface/80 backdrop-blur-md border-t border-white/10 p-4 z-50">

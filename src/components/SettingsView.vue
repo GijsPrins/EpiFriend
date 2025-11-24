@@ -2,15 +2,16 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useSettings } from '../composables/useSettings'
+import { useToast } from '../composables/useToast'
 import GlassCard from './ui/GlassCard.vue'
 import GlassButton from './ui/GlassButton.vue'
 import GlassInput from './ui/GlassInput.vue'
 
-const { t } = useI18n()
-const { settings, updateProfile, updateEmergency, updateMedical, addAllergy, removeAllergy } = useSettings()
+const { t, locale } = useI18n()
+const { settings, addAllergy, removeAllergy } = useSettings()
+const { showToast } = useToast()
 
 const newAllergy = ref('')
-const showSuccess = ref(false)
 
 const handleAddAllergy = () => {
   if (newAllergy.value.trim()) {
@@ -20,21 +21,18 @@ const handleAddAllergy = () => {
 }
 
 const handleSave = () => {
-  showSuccess.value = true
-  setTimeout(() => {
-    showSuccess.value = false
-  }, 3000)
+  showToast('success', t('settings.save_success'))
+}
+
+const changeLanguage = (lang) => {
+  locale.value = lang
+  settings.value.preferences.language = lang
 }
 </script>
 
 <template>
   <div class="space-y-6">
-    <div class="flex justify-between items-center">
-      <h2 class="text-2xl font-bold text-white">{{ t('settings.title') }}</h2>
-      <div v-if="showSuccess" class="text-success text-sm animate-fade-in">
-        ✓ {{ t('settings.save_success') }}
-      </div>
-    </div>
+    <h2 class="text-2xl font-semibold text-white">{{ t('settings.title') }}</h2>
 
     <!-- Personal Information -->
     <GlassCard>
@@ -105,6 +103,36 @@ const handleSave = () => {
             placeholder="+31 20 1234567"
             class="mt-4"
           />
+        </div>
+      </div>
+    </GlassCard>
+
+    <!-- Preferences -->
+    <GlassCard>
+      <h3 class="text-lg font-semibold text-white mb-4">{{ t('settings.preferences') }}</h3>
+      <div class="space-y-4">
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-medium text-gray-300 ml-1">{{ t('settings.language') }}</label>
+          <div class="flex gap-4">
+            <button
+              @click="changeLanguage('nl')"
+              class="flex-1 px-4 py-2 rounded-lg border transition-all"
+              :class="locale === 'nl' 
+                ? 'bg-primary/20 border-primary text-white' 
+                : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/20'"
+            >
+              Nederlands
+            </button>
+            <button
+              @click="changeLanguage('en')"
+              class="flex-1 px-4 py-2 rounded-lg border transition-all"
+              :class="locale === 'en' 
+                ? 'bg-primary/20 border-primary text-white' 
+                : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/20'"
+            >
+              English
+            </button>
+          </div>
         </div>
       </div>
     </GlassCard>
