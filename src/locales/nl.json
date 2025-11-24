@@ -1,0 +1,80 @@
+{
+  "common": {
+    "welcome": "Welkom bij EpiFriend",
+    "dashboard": "Dashboard",
+    "log_episode": "Aanval Loggen",
+    "medication": "Medicatie",
+    "history": "Geschiedenis",
+    "settings": "Instellingen",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "today": "Vandaag",
+    "add": "Toevoegen",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "search": "Zoeken",
+    "home": "Home",
+    "meds": "Medicijnen",
+    "taken": "Ingenomen",
+    "missed": "Gemist",
+    "started": "Gestart op",
+    "date_time": "Datum & Tijd",
+    "type": "Type",
+    "duration": "Duur",
+    "notes": "Notities",
+    "calendar": "Kalender",
+    "future_date_error": "Je kunt geen gebeurtenissen in de toekomst loggen",
+    "episode_types": {
+      "general": "Algemeen",
+      "tonic_clonic": "Tonisch-klonisch",
+      "absence": "Absence",
+      "focal": "Focaal",
+      "myoclonic": "Myoclonisch",
+      "atonic": "Atonisch"
+    }
+  },
+  "dashboard": {
+    "greeting": "Goedemorgen",
+    "medication_status": "Medicatie Status",
+    "recent_activity": "Recente Activiteit",
+    "no_activity": "Geen recente activiteit",
+    "episode_logged": "Aanval gelogd",
+    "no_meds_configured": "Geen medicatie ingesteld"
+  },
+  "medication": {
+    "add_title": "Medicatie Toevoegen",
+    "edit_title": "Medicatie Bewerken",
+    "search_placeholder": "Typ om te zoeken...",
+    "dosage_label": "Dosering (bijv. 500mg)",
+    "dosage_placeholder": "500mg",
+    "frequency_label": "Keren per dag",
+    "frequency_placeholder": "2",
+    "no_meds_added": "Nog geen medicatie toegevoegd.",
+    "invalid_frequency": "Frequentie moet tussen 1 en 10 keer per dag zijn"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "personal_info": "Persoonlijke Informatie",
+    "name": "Naam",
+    "date_of_birth": "Geboortedatum",
+    "emergency_contacts": "Noodcontacten",
+    "emergency_contact_name": "Noodcontact Naam",
+    "emergency_contact_phone": "Noodcontact Telefoon",
+    "emergency_contact_relation": "Relatie",
+    "doctor_name": "Huisarts Naam",
+    "doctor_phone": "Huisarts Telefoon",
+    "neurologist_name": "Neuroloog Naam",
+    "neurologist_phone": "Neuroloog Telefoon",
+    "medical_info": "Medische Informatie",
+    "allergies": "Allergieën",
+    "add_allergy": "Allergie toevoegen",
+    "medical_notes": "Medische Notities",
+    "save_success": "Instellingen opgeslagen"
+  },
+  "calendar": {
+    "day_details": "Details voor",
+    "episodes": "Aanvallen",
+    "missed_medications": "Gemiste Medicatie",
+    "no_events": "Geen gebeurtenissen op deze dag"
+  }
+}

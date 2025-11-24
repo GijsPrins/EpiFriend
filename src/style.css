@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-primary: #8b5cf6;
+  --color-primary-hover: #7c3aed;
+  --color-secondary: #ec4899;
+  --color-accent: #06b6d4;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  --font-sans: 'Inter', sans-serif;
+  
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body {
+  @apply bg-background text-white font-sans antialiased;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 20%);
+  min-height: 100vh;
+}
+
+.glass-panel {
+  @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl shadow-xl;
+}
+
+.glass-button {
+  @apply backdrop-blur-sm bg-primary/80 hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary/50;
+}
+
+.glass-input {
+  @apply bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all;
+}
+

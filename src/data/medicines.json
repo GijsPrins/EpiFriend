@@ -1,0 +1,12 @@
+[
+  { "id": "med_1", "name": "Valproate (Depakote)", "common_dosages": ["250mg", "500mg"] },
+  { "id": "med_2", "name": "Lamotrigine (Lamictal)", "common_dosages": ["25mg", "100mg", "150mg", "200mg"] },
+  { "id": "med_3", "name": "Levetiracetam (Keppra)", "common_dosages": ["250mg", "500mg", "750mg", "1000mg"] },
+  { "id": "med_4", "name": "Carbamazepine (Tegretol)", "common_dosages": ["100mg", "200mg", "400mg"] },
+  { "id": "med_5", "name": "Oxcarbazepine (Trileptal)", "common_dosages": ["150mg", "300mg", "600mg"] },
+  { "id": "med_6", "name": "Topiramate (Topamax)", "common_dosages": ["25mg", "50mg", "100mg", "200mg"] },
+  { "id": "med_7", "name": "Lacosamide (Vimpat)", "common_dosages": ["50mg", "100mg", "150mg", "200mg"] },
+  { "id": "med_8", "name": "Phenytoin (Dilantin)", "common_dosages": ["30mg", "50mg", "100mg"] },
+  { "id": "med_9", "name": "Clobazam (Onfi)", "common_dosages": ["10mg", "20mg"] },
+  { "id": "med_10", "name": "Clonazepam (Klonopin)", "common_dosages": ["0.5mg", "1mg", "2mg"] }
+]
