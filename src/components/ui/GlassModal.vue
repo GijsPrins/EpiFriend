@@ -14,7 +14,7 @@ defineEmits(['close'])
       <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" @click="$emit('close')"></div>
       
       <!-- Modal Content -->
-      <div class="relative w-full max-w-md glass-panel p-6 transform transition-all">
+      <div class="relative w-full max-w-2xl glass-panel p-6 transform transition-all">
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold text-white">{{ title }}</h3>
           <button @click="$emit('close')" class="text-gray-400 hover:text-white">

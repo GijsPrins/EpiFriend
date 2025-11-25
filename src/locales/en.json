@@ -19,6 +19,7 @@
     "missed": "Missed",
     "started": "Started",
     "date_time": "Date & Time",
+    "basic_info": "Basic Information",
     "type": "Type",
     "duration": "Duration",
     "notes": "Notes",
@@ -76,7 +77,17 @@
       "focal": "Focal",
       "myoclonic": "Myoclonic",
       "atonic": "Atonic"
-    }
+    },
+    "placeholder_duration": "e.g. 2 min",
+    "placeholder_medication": "e.g. Diazepam 5mg",
+    "placeholder_other_warning": "Describe other warning signs...",
+    "placeholder_other_symptoms": "Describe other symptoms...",
+    "placeholder_other_after": "Describe other after-effects...",
+    "placeholder_other_injuries": "Describe other injuries...",
+    "placeholder_other_triggers": "Describe other possible triggers...",
+    "placeholder_notes": "Any additional information...",
+    "mild": "Mild",
+    "severe": "Severe"
   },
   "dashboard": {
     "greeting": "Good Morning",
@@ -114,6 +125,8 @@
     "allergies": "Allergies",
     "add_allergy": "Add allergy",
     "medical_notes": "Medical Notes",
+    "preferences": "Preferences",
+    "language": "Language",
     "save_success": "Settings saved"
   },
   "calendar": {

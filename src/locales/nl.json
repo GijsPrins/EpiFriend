@@ -19,6 +19,7 @@
     "missed": "Gemist",
     "started": "Gestart op",
     "date_time": "Datum & Tijd",
+    "basic_info": "Basisinformatie",
     "type": "Type",
     "duration": "Duur",
     "notes": "Notities",
@@ -76,7 +77,17 @@
       "focal": "Focaal",
       "myoclonic": "Myoclonisch",
       "atonic": "Atonisch"
-    }
+    },
+    "placeholder_duration": "bijv. 2 min",
+    "placeholder_medication": "bijv. Diazepam 5mg",
+    "placeholder_other_warning": "Beschrijf andere signalen...",
+    "placeholder_other_symptoms": "Beschrijf andere symptomen...",
+    "placeholder_other_after": "Beschrijf andere na-effecten...",
+    "placeholder_other_injuries": "Beschrijf andere verwondingen...",
+    "placeholder_other_triggers": "Beschrijf andere mogelijke triggers...",
+    "placeholder_notes": "Eventuele extra informatie...",
+    "mild": "Mild",
+    "severe": "Ernstig"
   },
   "dashboard": {
     "greeting": "Goedemorgen",
@@ -114,6 +125,8 @@
     "allergies": "Allergieën",
     "add_allergy": "Allergie toevoegen",
     "medical_notes": "Medische Notities",
+    "preferences": "Voorkeuren",
+    "language": "Taal",
     "save_success": "Instellingen opgeslagen"
   },
   "calendar": {
