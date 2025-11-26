@@ -88,7 +88,8 @@
     "placeholder_other_triggers": "Describe other possible triggers...",
     "placeholder_notes": "Any additional information...",
     "mild": "Mild",
-    "severe": "Severe"
+    "severe": "Severe",
+    "export_pdf": "Export to PDF"
   },
   "dashboard": {
     "greeting": "Good Morning",
@@ -154,6 +155,50 @@
       "th": "Th",
       "fr": "Fr",
       "sa": "Sa"
+    }
+  },
+  "pdf": {
+    "export_title": "Export Medical Report",
+    "data_selection": "Data Selection",
+    "include_episodes": "Include Episodes",
+    "episode_detail_basic": "Basic Details (Date, Time, Type)",
+    "episode_detail_full": "Full Details (All information)",
+    "include_missed_meds": "Include Missed Medications",
+    "patient_info": "Patient Information",
+    "patient_name_always": "Patient name will always be included",
+    "include_additional_info": "Include additional patient info (DOB, allergies, contacts)",
+    "date_range": "Date Range (Optional)",
+    "date_from": "From",
+    "date_to": "To",
+    "generated_success": "PDF generated successfully",
+    "not_provided": "Not provided",
+    "report": {
+      "title": "EpiFriend - Medical Report",
+      "generated":"Generated on: {date}",
+      "patient_name":"Patient name: {name}",
+      "date": "Date",
+      "time": "Time",
+      "type": "Type",
+      "severity": "Severity",
+      "duration": "Duration",
+      "triggers": "Triggers",
+      "symptoms": "Symptoms",
+      "emergency": "Emergency",
+      "notes": "Notes",
+      "date_of_birth": "Date of Birth: {dob}",
+      "allergies": "Allergies: {allergies}",
+      "doctor": "Doctor: {doctor}",
+      "neurologist": "Neurologist: {neurologist}",
+      "medical_notes": "Medical Notes: {medical_notes}",
+      "episodes": "Episodes",
+      "missed_medications": "Missed Medications",
+      "medication":"Medication",
+      "medication_dosage":"Dosage",
+      "medication_frequency":"Frequency",
+      "dose_label": "Dose {current}/{total}",
+      "single_dose": "Single dose",
+      "no_episodes_recorded": "No Episodes Recorded",
+      "no_missed_medications_recorded": "No Missed Medications Recorded"
     }
   }
 }

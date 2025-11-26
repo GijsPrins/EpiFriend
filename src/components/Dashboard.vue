@@ -7,6 +7,7 @@ import { useSettings } from '../composables/useSettings'
 import GlassCard from './ui/GlassCard.vue'
 import GlassButton from './ui/GlassButton.vue'
 import LogEpisodeModal from './LogEpisodeModal.vue'
+import ExportPdfModal from './ExportPdfModal.vue'
 
 const { t } = useI18n()
 const { activeMedications, logMissedDose, removeMissedDose, isMissed } = useMedicationStore()
@@ -31,6 +32,7 @@ const recentEpisodes = computed(() => getRecentEpisodes())
 
 const showLogModal = ref(false)
 const selectedEpisode = ref(null)
+const showExportModal = ref(false)
 
 const handleSaveEpisode = (episodeData) => {
   if (episodeData.id) {
@@ -139,7 +141,15 @@ const today = new Date().toLocaleDateString()
 
     <!-- Recent Activity -->
     <section>
-      <h3 class="text-lg font-semibold text-white mb-3">{{ t('dashboard.recent_activity') }}</h3>
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="text-lg font-semibold text-white">{{ t('dashboard.recent_activity') }}</h3>
+        <GlassButton @click="showExportModal = true" variant="secondary" class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          {{ t('common.export_pdf') }}
+        </GlassButton>
+      </div>
       <div class="space-y-3">
         <div 
           v-for="ep in recentEpisodes" 
@@ -167,6 +177,11 @@ const today = new Date().toLocaleDateString()
       :episode="selectedEpisode"
       @close="showLogModal = false"
       @save="handleSaveEpisode"
+    />
+
+    <ExportPdfModal 
+      :show="showExportModal" 
+      @close="showExportModal = false"
     />
   </div>
 </template>

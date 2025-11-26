@@ -88,7 +88,8 @@
     "placeholder_other_triggers": "Beschrijf andere mogelijke triggers...",
     "placeholder_notes": "Eventuele extra informatie...",
     "mild": "Mild",
-    "severe": "Ernstig"
+    "severe": "Ernstig",
+    "export_pdf": "Exporteren naar PDF"
   },
   "dashboard": {
     "greeting": "Goedemorgen",
@@ -154,6 +155,50 @@
       "th": "Do",
       "fr": "Vr",
       "sa": "Za"
+    }
+  },
+  "pdf": {
+    "export_title": "Medisch Rapport Exporteren",
+    "data_selection": "Data Selectie",
+    "include_episodes": "Inclusief episoden",
+    "episode_detail_basic": "Basis details (Datum, Tijd, Type)",
+    "episode_detail_full": "Volledige details (Alle informatie)",
+    "include_missed_meds": "Inclusief gemiste medicijnen",
+    "patient_info": "Patiëntinformatie",
+    "patient_name_always": "Patiëntnaam wordt altijd opgenomen",
+    "include_additional_info": "Inclusief aanvullende patiëntinfo (geboortedatum, allergieën, contacten)",
+    "date_range": "Datumbereik (Optioneel)",
+    "date_from": "Van",
+    "date_to": "Tot",
+    "generated_success": "PDF succesvol gegenereerd",
+    "not_provided": "Niet ingevoerd",
+    "report": {
+      "title": "EpiFriend - Medisch Rapport",
+      "generated":"Gegenereerd op: {date}",
+      "patient_name":"Patiëntnaam: {name}",
+      "date": "Datum",
+      "time": "Tijd",
+      "type": "Type",
+      "severity": "Ernstigheid",
+      "duration": "Duur",
+      "triggers": "Triggers",
+      "symptoms": "Symptomen",
+      "emergency": "Hulpdiensten",
+      "notes": "Notities",
+      "date_of_birth": "Geboortedatum: {dob}",
+      "allergies": "Allergieën: {allergies}",
+      "doctor": "Huisarts: {doctor}",
+      "neurologist": "Neuroloog: {neurologist}",
+      "medical_notes": "Medische Notities: {medical_notes}",
+      "episodes": "Aanvallen",
+      "missed_medications": "Gemiste Medicatie",
+      "medication":"Medicatie",
+      "medication_dosage":"Dosering",
+      "medication_frequency":"Frequentie",
+      "dose_label": "Dosis {current}/{total}",
+      "single_dose": "Enkele dosis",
+      "no_episodes_recorded": "Geen Aanvallen Geregistreerd",
+      "no_missed_medications_recorded": "Geen Gemiste Medicatie Geregistreerd"
     }
   }
 }

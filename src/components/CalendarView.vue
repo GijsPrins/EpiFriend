@@ -4,6 +4,8 @@ import { useI18n } from 'vue-i18n'
 import { useEpisodeStore } from '../composables/useEpisodeStore'
 import { useMedicationStore } from '../composables/useMedicationStore'
 import GlassCard from './ui/GlassCard.vue'
+import GlassButton from './ui/GlassButton.vue'
+import ExportPdfModal from './ExportPdfModal.vue'
 
 const { t, locale } = useI18n()
 const { episodes } = useEpisodeStore()
@@ -12,6 +14,7 @@ const { hasAnyMissedDose, medications, medicationLogs, activeMedications } = use
 // Selected day state
 const selectedDay = ref(null)
 const selectedDate = ref(null)
+const showExportModal = ref(false)
 
 // Calendar Logic
 const currentDate = ref(new Date())
@@ -146,6 +149,12 @@ const weekDays = computed(() => [
         <button @click="nextMonth" class="p-2 text-gray-400 hover:text-white">
           &gt;
         </button>
+        <GlassButton @click="showExportModal = true" variant="secondary" class="flex items-center gap-2 ml-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          {{ t('common.export_pdf') }}
+        </GlassButton>
       </div>
 
       <!-- Grid -->
@@ -249,6 +258,11 @@ const weekDays = computed(() => [
         {{ t('calendar.no_events') }}
       </div>
     </GlassCard>
+
+    <ExportPdfModal 
+      :show="showExportModal" 
+      @close="showExportModal = false"
+    />
   </div>
 </template>
 
