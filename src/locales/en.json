@@ -8,6 +8,7 @@
     "settings": "Settings",
     "save": "Save",
     "cancel": "Cancel",
+    "warning": "Warning",
     "today": "Today",
     "add": "Add",
     "edit": "Edit",
@@ -127,12 +128,32 @@
     "medical_notes": "Medical Notes",
     "preferences": "Preferences",
     "language": "Language",
-    "save_success": "Settings saved"
+    "save_success": "Settings saved",
+    "data_management": "Data Management",
+    "export_data": "Export Data",
+    "import_data": "Import Data",
+    "export_desc": "Download a backup of your data",
+    "import_desc": "Restore data from a backup file",
+    "import_success": "Data successfully imported",
+    "import_error": "Invalid backup file",
+    "import_error_size": "File is too large (max 1MB)",
+    "confirm_import": "This will overwrite your current data. Are you sure? If you are not sure you can first make a backup of your current data."
   },
   "calendar": {
     "day_details": "Details for",
     "episodes": "Episodes",
     "missed_medications": "Missed Medications",
-    "no_events": "No events on this day"
+    "no_events": "No events on this day",
+    "legend_episode": "Episode",
+    "legend_missed_med": "Missed Med",
+    "weekdays": {
+      "su": "Su",
+      "mo": "Mo",
+      "tu": "Tu",
+      "we": "We",
+      "th": "Th",
+      "fr": "Fr",
+      "sa": "Sa"
+    }
   }
 }

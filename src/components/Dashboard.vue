@@ -78,14 +78,18 @@ const today = new Date().toLocaleDateString()
         <h2 class="text-3xl font-bold text-white">{{ t('dashboard.greeting') }}, {{ settings.profile.name || 'Friend' }}</h2>
         <p class="text-gray-400">{{ today }}</p>
       </div>
-      <div class="h-10 w-10 rounded-full bg-gradient-to-tr from-primary to-secondary"></div>
+      <div class="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center overflow-hidden border-2 border-primary/30">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-gray-300">
+          <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+        </svg>
+      </div>
     </header>
 
     <!-- Quick Actions -->
     <section>
       <button 
         @click="openLogModal()"
-        class="w-full py-6 rounded-2xl bg-gradient-to-r from-error/80 to-pink-600/80 backdrop-blur-md shadow-lg shadow-error/20 hover:shadow-error/40 transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 group"
+        class="w-full py-6 rounded-2xl bg-gradient-to-r from-primary to-secondary backdrop-blur-md shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 group"
       >
         <div class="p-2 bg-white/20 rounded-full group-hover:animate-pulse">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

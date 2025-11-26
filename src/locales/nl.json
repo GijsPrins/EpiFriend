@@ -8,6 +8,7 @@
     "settings": "Instellingen",
     "save": "Opslaan",
     "cancel": "Annuleren",
+    "warning": "Waarschuwing",
     "today": "Vandaag",
     "add": "Toevoegen",
     "edit": "Bewerken",
@@ -127,12 +128,32 @@
     "medical_notes": "Medische Notities",
     "preferences": "Voorkeuren",
     "language": "Taal",
-    "save_success": "Instellingen opgeslagen"
+    "save_success": "Instellingen opgeslagen",
+    "data_management": "Gegevensbeheer",
+    "export_data": "Gegevens Exporteren",
+    "import_data": "Gegevens Importeren",
+    "export_desc": "Download een back-up van je gegevens",
+    "import_desc": "Herstel gegevens uit een back-up bestand",
+    "import_success": "Gegevens succesvol geïmporteerd",
+    "import_error": "Ongeldig back-up bestand",
+    "import_error_size": "Bestand is te groot (max 1MB)",
+    "confirm_import": "Dit overschrijft je huidige gegevens. Weet je het zeker? Indien je het niet zeker weet kan je eerst een backup maken van je huidige gegevens."
   },
   "calendar": {
     "day_details": "Details voor",
     "episodes": "Aanvallen",
     "missed_medications": "Gemiste Medicatie",
-    "no_events": "Geen gebeurtenissen op deze dag"
+    "no_events": "Geen gebeurtenissen op deze dag",
+    "legend_episode": "Aanval",
+    "legend_missed_med": "Gemiste Medicatie",
+    "weekdays": {
+      "su": "Zo",
+      "mo": "Ma",
+      "tu": "Di",
+      "we": "Wo",
+      "th": "Do",
+      "fr": "Vr",
+      "sa": "Za"
+    }
   }
 }

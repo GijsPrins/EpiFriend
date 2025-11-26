@@ -5,7 +5,7 @@ import { useEpisodeStore } from '../composables/useEpisodeStore'
 import { useMedicationStore } from '../composables/useMedicationStore'
 import GlassCard from './ui/GlassCard.vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { episodes } = useEpisodeStore()
 const { hasAnyMissedDose, medications, medicationLogs, activeMedications } = useMedicationStore()
 
@@ -17,7 +17,7 @@ const selectedDate = ref(null)
 const currentDate = ref(new Date())
 
 const currentMonthYear = computed(() => {
-  return currentDate.value.toLocaleString('default', { month: 'long', year: 'numeric' })
+  return currentDate.value.toLocaleString(locale.value, { month: 'long', year: 'numeric' })
 })
 
 const daysInMonth = computed(() => {
@@ -29,7 +29,9 @@ const daysInMonth = computed(() => {
 const firstDayOfMonth = computed(() => {
   const year = currentDate.value.getFullYear()
   const month = currentDate.value.getMonth()
-  return new Date(year, month, 1).getDay() // 0 = Sunday
+  const day = new Date(year, month, 1).getDay() // 0 = Sunday
+  // Convert to Monday start (0 = Monday, ..., 6 = Sunday)
+  return (day + 6) % 7
 })
 
 const calendarDays = computed(() => {
@@ -119,7 +121,15 @@ const selectedDayMissedMeds = computed(() => {
   return missedMeds
 })
 
-const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
+const weekDays = computed(() => [
+  t('calendar.weekdays.mo'),
+  t('calendar.weekdays.tu'),
+  t('calendar.weekdays.we'),
+  t('calendar.weekdays.th'),
+  t('calendar.weekdays.fr'),
+  t('calendar.weekdays.sa'),
+  t('calendar.weekdays.su')
+])
 </script>
 
 <template>
@@ -167,11 +177,11 @@ const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
       <div class="flex gap-4 justify-center mt-6 text-xs text-gray-400">
         <div class="flex items-center gap-2">
           <div class="w-2 h-2 rounded-full bg-error"></div>
-          <span>Episode</span>
+          <span>{{ t('calendar.legend_episode') }}</span>
         </div>
         <div class="flex items-center gap-2">
           <div class="w-2 h-2 rounded-full bg-warning"></div>
-          <span>Missed Med</span>
+          <span>{{ t('calendar.legend_missed_med') }}</span>
         </div>
       </div>
     </GlassCard>

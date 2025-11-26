@@ -14,11 +14,8 @@ const currentView = ref('dashboard')
 <template>
   <div class="min-h-screen bg-background text-white pb-24"> <!-- Padding bottom for nav -->
     <div class="max-w-2xl mx-auto p-4 md:p-8">
-      <header class="mb-8 flex justify-center">
-        <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-          EpiFriend
-        </h1>
-      </header>
+      <!-- Header removed as per user request -->
+      <div class="mb-8"></div>
       
       <main>
         <Transition name="fade" mode="out-in">

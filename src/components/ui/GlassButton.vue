@@ -10,6 +10,7 @@ defineProps({
 
 <template>
   <button 
+    type="button"
     class="glass-button"
     :class="{
       'bg-primary/80 hover:bg-primary/90': variant === 'primary',
