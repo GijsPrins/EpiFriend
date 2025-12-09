@@ -8,7 +8,7 @@ import { useSettings } from './useSettings'
 export function usePdfExport() {
   const { t, locale } = useI18n()
   const { episodes } = useEpisodeStore()
-  const { medications, medicationLogs } = useMedicationStore()
+  const { medications, medicationLogs, activeMedications } = useMedicationStore()
   const { settings } = useSettings()
 
   /**
@@ -24,6 +24,7 @@ export function usePdfExport() {
     const {
       includeEpisodes = true,
       includeMissedMeds = true,
+      includeCurrentMeds = true,
       episodeDetailLevel = 'full',
       includePatientInfo = true,
       dateRange = null
@@ -188,6 +189,44 @@ export function usePdfExport() {
         doc.text(t('pdf.report.no_episodes_recorded'), 14, yPosition)
         yPosition += 15
         doc.setTextColor(0, 0, 0)
+      }
+    }
+
+    // Current Medications Section
+    if (includeCurrentMeds) {
+      const activeMeds = activeMedications()
+
+      if (activeMeds.length > 0) {
+        // Check if we need a new page
+        if (yPosition > 220) {
+          doc.addPage()
+          yPosition = 20
+        }
+
+        doc.setFontSize(14)
+        doc.setTextColor(0, 0, 0)
+        doc.text(t('pdf.report.current_medications'), 14, yPosition)
+        yPosition += 7
+
+        const currentMedData = activeMeds.map(med => {
+          return [
+            med.name,
+            med.dosage,
+            `${med.frequency}x`,
+            new Date(med.startDate).toLocaleDateString(locale.value)
+          ]
+        })
+
+        autoTable(doc, {
+          startY: yPosition,
+          head: [[t('pdf.report.medication'), t('pdf.report.medication_dosage'), t('pdf.report.medication_frequency'), t('pdf.report.start_date')]],
+          body: currentMedData,
+          theme: 'grid',
+          headStyles: { fillColor: [30, 58, 138], textColor: 255 },
+          styles: { fontSize: 10, cellPadding: 3 }
+        })
+
+        yPosition = doc.lastAutoTable.finalY + 15
       }
     }
 

@@ -21,6 +21,7 @@ const { showToast } = useToast()
 const includeEpisodes = ref(true)
 const episodeDetailLevel = ref('full') // 'basic' or 'full'
 const includeMissedMeds = ref(true)
+const includeCurrentMeds = ref(true)
 const includePatientInfo = ref(true)
 const dateFrom = ref('')
 const dateTo = ref('')
@@ -34,6 +35,7 @@ const handleGenerate = () => {
     const options = {
       includeEpisodes: includeEpisodes.value,
       includeMissedMeds: includeMissedMeds.value,
+      includeCurrentMeds: includeCurrentMeds.value,
       episodeDetailLevel: episodeDetailLevel.value,
       includePatientInfo: includePatientInfo.value,
       dateRange: (dateFrom.value || dateTo.value) ? {
@@ -52,6 +54,7 @@ const handleGenerate = () => {
       includeEpisodes.value = true
       episodeDetailLevel.value = 'full'
       includeMissedMeds.value = true
+      includeCurrentMeds.value = true
       includePatientInfo.value = true
       dateFrom.value = ''
       dateTo.value = ''
@@ -97,6 +100,9 @@ const handleGenerate = () => {
 
           <!-- Include Missed Meds -->
           <GlassCheckbox v-model="includeMissedMeds" :label="t('pdf.include_missed_meds')" />
+
+          <!-- Include Current Meds -->
+          <GlassCheckbox v-model="includeCurrentMeds" :label="t('pdf.include_current_meds')" />
         </div>
       </div>
 

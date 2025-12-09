@@ -8,6 +8,7 @@ import GlassCard from './ui/GlassCard.vue'
 import GlassButton from './ui/GlassButton.vue'
 import LogEpisodeModal from './LogEpisodeModal.vue'
 import ExportPdfModal from './ExportPdfModal.vue'
+import LogMissedDoseModal from './LogMissedDoseModal.vue'
 
 const { t } = useI18n()
 const { activeMedications, logMissedDose, removeMissedDose, isMissed } = useMedicationStore()
@@ -33,6 +34,7 @@ const recentEpisodes = computed(() => getRecentEpisodes())
 const showLogModal = ref(false)
 const selectedEpisode = ref(null)
 const showExportModal = ref(false)
+const showMissedDoseModal = ref(false)
 
 const handleSaveEpisode = (episodeData) => {
   if (episodeData.id) {
@@ -104,7 +106,15 @@ const today = new Date().toLocaleDateString()
 
     <!-- Medication Status -->
     <section>
-      <h3 class="text-lg font-semibold text-white mb-3">{{ t('dashboard.medication_status') }}</h3>
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="text-lg font-semibold text-white">{{ t('dashboard.medication_status') }}</h3>
+        <button 
+          @click="showMissedDoseModal = true"
+          class="text-xs text-secondary hover:text-white transition-colors underline"
+        >
+          {{ t('medication.log_past_dose') }}
+        </button>
+      </div>
       <GlassCard>
         <div v-if="activeMeds.length === 0" class="text-gray-400 text-center py-4">
           {{ t('dashboard.no_meds_configured') }}
@@ -182,6 +192,11 @@ const today = new Date().toLocaleDateString()
     <ExportPdfModal 
       :show="showExportModal" 
       @close="showExportModal = false"
+    />
+
+    <LogMissedDoseModal
+      :show="showMissedDoseModal"
+      @close="showMissedDoseModal = false"
     />
   </div>
 </template>

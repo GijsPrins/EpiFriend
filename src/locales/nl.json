@@ -108,7 +108,10 @@
     "frequency_label": "Keren per dag",
     "frequency_placeholder": "2",
     "no_meds_added": "Nog geen medicatie toegevoegd.",
-    "invalid_frequency": "Frequentie moet tussen 1 en 10 keer per dag zijn"
+    "invalid_frequency": "Frequentie moet tussen 1 en 10 keer per dag zijn",
+    "log_past_dose": "Log eerdere gemiste dosis",
+    "select_date": "Selecteer datum",
+    "doses_for_date": "Doses voor {date}"
   },
   "settings": {
     "title": "Instellingen",
@@ -164,6 +167,7 @@
     "episode_detail_basic": "Basis details (Datum, Tijd, Type)",
     "episode_detail_full": "Volledige details (Alle informatie)",
     "include_missed_meds": "Inclusief gemiste medicijnen",
+    "include_current_meds": "Inclusief huidige medicatie",
     "patient_info": "Patiëntinformatie",
     "patient_name_always": "Patiëntnaam wordt altijd opgenomen",
     "include_additional_info": "Inclusief aanvullende patiëntinfo (geboortedatum, allergieën, contacten)",
@@ -191,6 +195,8 @@
       "neurologist": "Neuroloog: {neurologist}",
       "medical_notes": "Medische Notities: {medical_notes}",
       "episodes": "Aanvallen",
+      "current_medications": "Huidige Medicatie",
+      "start_date": "Startdatum",
       "missed_medications": "Gemiste Medicatie",
       "medication":"Medicatie",
       "medication_dosage":"Dosering",
