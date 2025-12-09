@@ -108,7 +108,10 @@
     "frequency_label": "Times per Day",
     "frequency_placeholder": "2",
     "no_meds_added": "No medications added yet.",
-    "invalid_frequency": "Frequency must be between 1 and 10 times per day"
+    "invalid_frequency": "Frequency must be between 1 and 10 times per day",
+    "log_past_dose": "Log Past Missed Dose",
+    "select_date": "Select Date",
+    "doses_for_date": "Doses for {date}"
   },
   "settings": {
     "title": "Settings",
@@ -164,6 +167,7 @@
     "episode_detail_basic": "Basic Details (Date, Time, Type)",
     "episode_detail_full": "Full Details (All information)",
     "include_missed_meds": "Include Missed Medications",
+    "include_current_meds": "Include Current Medications",
     "patient_info": "Patient Information",
     "patient_name_always": "Patient name will always be included",
     "include_additional_info": "Include additional patient info (DOB, allergies, contacts)",
@@ -191,6 +195,8 @@
       "neurologist": "Neurologist: {neurologist}",
       "medical_notes": "Medical Notes: {medical_notes}",
       "episodes": "Episodes",
+      "current_medications": "Current Medications",
+      "start_date": "Start Date",
       "missed_medications": "Missed Medications",
       "medication":"Medication",
       "medication_dosage":"Dosage",
